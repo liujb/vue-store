@@ -16,7 +16,8 @@
 
         if (domain === true) {
           /* no-useless-escape */
-          domain = document.domain.replace(/[a-zA-Z]+/, '') // like .xiaojukeji.com
+          // .xx.com
+          domain = document.domain.replace(/[a-zA-Z]+/, '')
         }
         var extr = domain ? ';domain=' + domain + ';path=/' : ''
         document.cookie = key + '=' + escape(val) + ';expires=' + exp.toGMTString() + extr
